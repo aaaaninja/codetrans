@@ -94,13 +94,13 @@ jobs:
       - name: compress
         run: |
           cd ..
-          tar caf codeoss.tar VSCode-win32-x64
+          tar caf codeosswin.tar VSCode-win32-x64
 
       - name: Upload Artifacts (win)
         uses: actions/upload-artifact@v3
         with:
           name: code-transparent
-          path: D:\a\codetrans\codeoss.tar
+          path: D:\a\codetrans\codeosswin.tar
 
 #     - name: Setup tmate session
 #       uses: mxschmitt/action-tmate@v3
@@ -185,13 +185,13 @@ jobs:
       - name: compress
         run: |
           cd ..
-          tar caf codeoss.tar VSCode-linux-x64
+          tar caf codeosslinux.tar VSCode-linux-x64
 
       - name: Upload Artifacts (linux)
         uses: actions/upload-artifact@v3
         with:
           name: code-transparent
-          path: /home/runner/work/codetrans/codeoss.tar
+          path: /home/runner/work/codetrans/codeosslinux.tar
 
 #     - name: Setup tmate session
 #       uses: mxschmitt/action-tmate@v3
