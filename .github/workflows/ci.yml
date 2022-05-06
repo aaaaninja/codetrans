@@ -91,9 +91,6 @@ jobs:
       - name: list up
         run: ls
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: compress
         run: |
           cd ..
@@ -104,6 +101,9 @@ jobs:
         with:
           name: code-transparent
           path: D:\a\codetrans\codeoss.tar
+
+#     - name: Setup tmate session
+#       uses: mxschmitt/action-tmate@v3
 
   linux:
     name: Linux
@@ -182,9 +182,6 @@ jobs:
       - name: list up
         run: ls -alh
 
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-
       - name: compress
         run: |
           cd ..
@@ -195,6 +192,9 @@ jobs:
         with:
           name: code-transparent
           path: /home/runner/work/codetrans/codeoss.tar
+
+#     - name: Setup tmate session
+#       uses: mxschmitt/action-tmate@v3
 
   hygiene:
     name: Hygiene, Layering and Monaco Editor
