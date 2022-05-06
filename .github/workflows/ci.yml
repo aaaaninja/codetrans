@@ -79,7 +79,7 @@ jobs:
         run: |
           yarn run gulp compile-build
           yarn run gulp compile-extension-media
-          yarn run gulp compile-extension-build
+          yarn run gulp compile-extensions-build
           yarn run gulp vscode-win32-x64-min
 
   linux:
@@ -147,7 +147,7 @@ jobs:
         run: |
           yarn run gulp compile-build
           yarn run gulp compile-extension-media
-          yarn run gulp compile-extension-build
+          yarn run gulp compile-extensions-build
           yarn run gulp vscode-linux-x64-min
 
   hygiene:
