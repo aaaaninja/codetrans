@@ -66,8 +66,14 @@ jobs:
           mkdir -Force .build/node_modules_cache
           7z.exe a .build/node_modules_cache/cache.7z -mx3 `@.build/node_modules_list.txt
 
+      - name: list up
+        run: ls -alh
+
       - name: Compile and Download
         run: yarn npm-run-all --max_old_space_size=4095 -lp compile "electron x64" playwright-install download-builtin-extensions
+
+      - name: list up
+        run: ls -alh
 
       - name: Compile Integration Tests
         run: yarn --cwd test/integration/browser compile
@@ -81,6 +87,9 @@ jobs:
           yarn run gulp compile-extension-media
           yarn run gulp compile-extensions-build
           yarn run gulp vscode-win32-x64-min
+
+      - name: list up
+        run: ls -alh
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
@@ -136,8 +145,14 @@ jobs:
           ELECTRON_SKIP_BINARY_DOWNLOAD: 1
         run: yarn --frozen-lockfile --network-timeout 180000
 
+      - name: list up
+        run: ls -alh
+
       - name: Compile and Download
         run: yarn npm-run-all --max_old_space_size=4095 -lp compile "electron x64" playwright-install download-builtin-extensions
+
+      - name: list up
+        run: ls -alh
 
       - name: Compile Integration Tests
         run: yarn --cwd test/integration/browser compile
@@ -152,6 +167,9 @@ jobs:
           yarn run gulp compile-extension-media
           yarn run gulp compile-extensions-build
           yarn run gulp vscode-linux-x64-min
+
+      - name: list up
+        run: ls -alh
 
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
