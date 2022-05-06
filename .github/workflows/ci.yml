@@ -99,7 +99,7 @@ jobs:
       - name: Upload Artifacts (win)
         uses: actions/upload-artifact@v3
         with:
-          name: code-transparent
+          name: code-transparent_win
           path: D:\a\codetrans\codeosswin.tar
 
 #     - name: Setup tmate session
@@ -190,7 +190,7 @@ jobs:
       - name: Upload Artifacts (linux)
         uses: actions/upload-artifact@v3
         with:
-          name: code-transparent
+          name: code-transparent_linux
           path: /home/runner/work/codetrans/codeosslinux.tar
 
 #     - name: Setup tmate session
